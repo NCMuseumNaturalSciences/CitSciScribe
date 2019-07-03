@@ -1,6 +1,5 @@
 # CitSciScribe
- 
-# CitSciScribe
+
 Citizen Science Web Application for Digital Transciption of Museum Collections Primary Sources
 
 <strong>Technology Stack</strong><br>
