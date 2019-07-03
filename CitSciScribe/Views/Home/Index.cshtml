@@ -1,0 +1,29 @@
+﻿@model CitSciScribe.Models.SiteStatistics
+<div id="inner-wrapper" class="col-sm-offset-2">
+    <div class="row">
+        <div class="col-xs-12 col-logo">
+            <img src="" id="logo" alt="CitSciScribe" class="citsci-logo img-responsive"/>
+        </div>
+    </div>
+    <div class="row main-content home-content">
+        <div class="col-xs-12">
+            <p>Welcome to CitSciScribe!</p>
+            <p>Since 1879, the North Carolina Museum of Natural Sciences has documented the biodiversity of the southeastern U.S. and beyond. This incredible record of the region’s natural history has powerful applications for research, conservation, and education. However, much of this potential remains hidden away in historic written records.</p>
+            <p>Join us! Become a Citizen Science Curator and unlock these hidden treasures. As you transform written records into a digital format you will make this valuable information available to anyone, anywhere in the world.</p>
+            <p>Get started today by clicking Transcribe Now below!</p>
+            <p>You can now automatically track your progress on <a href="https://scistarter.com/">SciStarter</a> by registering and joining the <a href="https://scistarter.com/project/18106-CitSciScribe">CitSciScribe project</a>.</p>
+        </div>
+        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+            <ul class="stats-list home-stats">
+                <li>Number of Projects: 13</li>
+                <li>Number of Completed Projects: 12</li>
+                <li>Total Number of Transcriptions: @Model.TranscriptionsTotal</li>
+                <li>Number of Transcribers: @Model.UsersContributing</li>
+            </ul>
+        </div>
+        <div class="col-sm-4 col-sm-offset-4 col-xs-12">
+            @Html.ActionLink("TRANSCRIBE NOW!", "Projects", "Transcription", null, new {@class = "btn btn-primary btnTranscribe"})
+        </div>
+    </div>
+
+</div>

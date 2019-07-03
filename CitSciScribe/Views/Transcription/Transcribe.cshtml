@@ -1,0 +1,415 @@
+@model CitSciScribe.Models.Card
+@{
+    Layout = "~/Views/Shared/_CardLayout.cshtml";
+    var formAction = "";
+    if (Model.CollectionProject == CitSciScribe.Models.CollectionProject.IchthyologyCharleston)
+    {
+        formAction = "TranscribeIchthyology?collectionProject=" + Model.CollectionProject;
+    }
+}
+
+<div id="card-wrapper" class="@Model.CollectionProject container-fluid transcribe-form-wrapper">
+<div class="row img-row">
+    <div class="col-sm-12 card-col">
+        <img src="@Model.CardImagePath" class="card-img" alt="Card"/>
+    </div>
+</div>
+<div class="row form-row">
+<form id="transcription-form" class="transcribe-form-h form-horizontal" action="@formAction" method="post" role="form">
+<input type="hidden" value="@Model.Id" name="cardId"/>
+@if (Model.CardType == CitSciScribe.Models.CardType.Ichthyology1)
+{
+    <!-- Charleston Fishes -->
+    <div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="col-sm-4 field-wrapper">
+                        <label for="catalog-number" class="control-label sr-only">Catalog Number</label>
+                        <div class="float-label">No.</div>
+                        <input type="text" class="form-control input-md" name="number" tabindex="1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="col-sm-8 field-wrapper">
+                        <label for="scientific-name" class="col-sm-2 control-label sr-only">Scientific Name</label>
+                        <div class="float-label">Scientific Name</div>
+                        <input type="text" class="form-control input-md" name="scientificname" tabindex="2">
+                    </div>
+                    <div class="col-sm-4 field-wrapper">
+                        <label for="sex" class="col-sm-2 control-label sr-only">Family</label>
+                        <div class="float-label">Family</div>
+                        <input type="text" class="form-control input-md" name="family" tabindex="3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="col-sm-6 field-wrapper">
+                        <label for="common-name" class="col-sm-2 control-label sr-only">Common Name</label>
+                        <div class="float-label">Common Name</div>
+                        <input type="text" class="form-control input-md" name="commonname" tabindex="4">
+                    </div>
+                    <div class="col-sm-6 field-wrapper">
+                        <label for="sex" class="col-sm-2 control-label sr-only">Drainage</label>
+                        <div class="float-label">Drainage</div>
+                        <input type="text" class="form-control input-md" name="drainage" tabindex="5">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="col-sm-12 field-wrapper">
+                        <label for="locality" class="col-sm-2 control-label sr-only">Locality</label>
+                        <div class="float-label">Locality</div>
+                        <input type="text" class="form-control input-md" name="locality" tabindex="6">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="col-sm-6 field-wrapper">
+                        <label for="collector" class="col-sm-2 control-label sr-only">Collected By</label>
+                        <div class="float-label">Collected by</div>
+                        <input type="text" class="form-control input-md" name="CollectedBy" tabindex="7">
+                    </div>
+                    <div class="col-sm-6 field-wrapper">
+                        <div class="float-label">Date</div>
+                        <input type="text" class="form-control input-md" name="date" tabindex="8">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="col-sm-2 field-wrapper">
+                        <label for="number-specimens" class="col-sm-2 control-label sr-only">Number of Specimens</label>
+                        <div class="float-label">Specimen(s)</div>
+                        <input type="text" class="form-control input-md" name="specimens" tabindex="9">
+                    </div>
+                    <div class="col-sm-8 field-wrapper">
+                        <label for="measurements" class="col-sm-2 control-label sr-only">Measurements</label>
+                        <div class="float-label">Measurements</div>
+                        <input type="text" class="form-control input-md" name="measurements" tabindex="10">
+                    </div>
+                    <div class="col-sm-2 field-wrapper">
+                        <label for="habitat" class="col-sm-2 control-label sr-only">Sex</label>
+                        <div class="float-label">Sex</div>
+                        <input type="text" class="form-control input-md" name="sex" tabindex="11">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group temp-group">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="col-sm-4 field-wrapper">
+                        <label for="air-temp" class="col-sm-2 control-label sr-only">Bottom</label>
+                        <div class="float-label">Bottom</div>
+                        <input type="text" class="form-control input-md" name="bottom" tabindex="12">
+                    </div>
+                    <div class="col-sm-4 field-wrapper">
+                        <label for="water-temp" class="col-sm-2 control-label sr-only">Water</label>
+                        <div class="float-label">Water</div>
+                        <input type="text" class="form-control input-md" name="water" tabindex="13">
+                    </div>
+                    <div class="col-sm-4 field-wrapper">
+                        <label for="time" class="col-sm-2 control-label sr-only">Depth Collected</label>
+                        <div class="float-label">Depth Collected</div>
+                        <input type="text" class="form-control input-md" name="depthcollected" tabindex="14">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group temp-group">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="col-sm-3 field-wrapper">
+                        <label for="air-temp" class="col-sm-2 control-label sr-only">Air Temperature</label>
+                        <div class="float-label">Temperature Air</div>
+                        <input type="text" class="form-control input-md" name="temperature" tabindex="15">
+                    </div>
+                    <div class="col-sm-3 field-wrapper">
+                        <label for="water-temp" class="col-sm-2 control-label sr-only">Water Temperature</label>
+                        <div class="float-label">Temperature Water</div>
+                        <input type="text" class="form-control input-md" name="waterTwo" tabindex="16">
+                    </div>
+                    <div class="col-sm-3 field-wrapper">
+                        <label for="time" class="col-sm-2 control-label sr-only">Salinity</label>
+                        <div class="float-label">Salinity</div>
+                        <input type="text" class="form-control input-md" name="salinity" tabindex="17">
+                    </div>
+                    <div class="col-sm-3 field-wrapper">
+                        <label for="time" class="col-sm-2 control-label sr-only">Time of Day</label>
+                        <div class="float-label">Time</div>
+                        <input type="text" class="form-control input-md" name="time" tabindex="18">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="col-sm-8 field-wrapper">
+                        <label for="remarks" class="col-sm-2 control-label sr-only">Remarks</label>
+                        <div class="float-label">Remarks</div>
+                        <input type="text" class="form-control input-md" name="remarks" tabindex="19">
+                    </div>
+                    <div class="col-sm-4 field-wrapper">
+                        <label for="storage-fluid" class="col-sm-2 control-label sr-only">Storage Fluid</label>
+                        <div class="float-label">Fluid</div>
+                        <input type="text" class="form-control input-md" name="fluid" tabindex="20">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="col-sm-4 field-wrapper">
+                        <label for="donor" class="col-sm-2 control-label sr-only">Donor</label>
+                        <div class="float-label">Donor</div>
+                        <input type="text" class="form-control input-md" name="donor" tabindex="21">
+                    </div>
+                    <div class="col-sm-4 field-wrapper">
+                        <label for="accession-num" class="col-sm-2 control-label sr-only">Accession Number</label>
+                        <div class="float-label">Access No.</div>
+                        <input type="text" class="form-control input-md" name="AccessNumber" tabindex="22">
+                    </div>
+                    <div class="col-sm-4 field-wrapper">
+                        <label for="neg" class="col-sm-2 control-label sr-only">Neg</label>
+                        <div class="float-label">Neg</div>
+                        <input type="text" class="form-control input-md" name="neg" tabindex="23">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group button-group">
+            <div class="col-sm-3">
+                <a href="@Url.Action("Index", "Home")" class="btn btn-primary" value="Home">
+                    <i class="fa fa-home"></i>
+                </a>
+                <a href="#" class="btn btn-primary help">
+                    Example
+                </a>
+                <a href="@Url.Action("Projects", "Transcription")" class="btn btn-primary">
+                    Projects
+                </a>
+            </div>
+            <div class="col-sm-offset-7 col-sm-2">
+                <input type="submit" class="btn btn-primary btnSubmit" value="Submit" style="float: right;" tabindex="24">
+                <a href="@Url.Action("SkipTranscription", "Transcription", new {cardId = Model.Id, collectionProject = Model.CollectionProject})" class="btn btn-primary btnSubmit" style="float: right; margin-right: 4px;">Skip</a>
+            </div>
+        </div>
+    </div>
+}
+</form>
+</div>
+</div>
+<!-- Transcription Notification Dialogs on Submit -->
+
+<div id="transcription-notification" style="display: none;">
+    <div id="dialog-wrapper" class="row">
+        @if (ViewBag.TranscriptionCount < 1000 &&
+             ViewBag.TranscriptionCount != 1 &&
+             ViewBag.TranscriptionCount != 15 &&
+             ViewBag.TranscriptionCount != 25 &&
+             ViewBag.TranscriptionCount != 50 &&
+             ViewBag.TranscriptionCount != 100 &&
+             ViewBag.TranscriptionCount != 200 &&
+             ViewBag.TranscriptionCount != 500 &&
+             ViewBag.TranscriptionCount != 1000)
+        {
+            <div class="dialog-content">
+                <p>Number of Completed Transcriptions</p>
+                <h1>@Html.Raw(ViewBag.TranscriptionCount) </h1>
+                <a id="btnDialogClose" class="btn btn-primary btnClose" href="#">Close</a>
+            </div>
+        }
+        @if (ViewBag.TranscriptionCount == 1)
+        {
+            <div class="dialog-content badge-content">
+                <h2>Congratulations!</h2>
+                <img src="~/Content/images/badges/large/1.png" alt="1"/>
+                <a id="btnDialogClose" class="btn btn-primary btnClose" href="#">Close</a>
+            </div>
+        }
+        @if (ViewBag.TranscriptionCount == 15)
+        {
+            <div class="dialog-content badge-content">
+                <h2>Congratulations!</h2>
+                <img src="~/Content/images/badges/large/15.png" alt="15"/>
+                <a id="btnDialogClose" class="btn btn-primary btnClose" href="#">Close</a>
+            </div>
+        }
+        @if (ViewBag.TranscriptionCount == 25)
+        {
+            <div class="dialog-content badge-content">
+                <h2>Congratulations!</h2>
+                <img src="~/Content/images/badges/large/25.png" alt="25"/>
+                <a id="btnDialogClose" class="btn btn-primary btnClose" href="#">Close</a>
+            </div>
+        }
+
+        @if (ViewBag.TranscriptionCount == 50)
+        {
+            <div class="dialog-content badge-content">
+                <h2>Congratulations!</h2>
+                <img src="~/Content/images/badges/large/50.png" alt="50"/>
+                <a id="btnDialogClose" class="btn btn-primary btnClose" href="#">Close</a>
+            </div>
+        }
+
+        @if (ViewBag.TranscriptionCount == 100)
+        {
+            <div class="dialog-content badge-content">
+                <h2>Congratulations!</h2>
+                <img src="~/Content/images/badges/large/100.png" alt="100"/>
+                <a id="btnDialogClose" class="btn btn-primary btnClose" href="#">Close</a>
+            </div>
+        }
+
+        @if (ViewBag.TranscriptionCount == 200)
+        {
+            <div class="dialog-content badge-content">
+                <h2>Congratulations!</h2>
+                <img src="~/Content/images/badges/large/200.png" alt="200"/>
+                <a id="btnDialogClose" class="btn btn-primary btnClose" href="#">Close</a>
+            </div>
+        }
+
+        @if (ViewBag.TranscriptionCount == 500)
+        {
+            <div class="dialog-content badge-content">
+                <h2>Congratulations!</h2>
+                <img src="~/Content/images/badges/large/500.png" alt="500"/>
+                <a id="btnDialogClose" class="btn btn-primary btnClose" href="#">Close</a>
+            </div>
+        }
+        @if (ViewBag.TranscriptionCount == 1000)
+        {
+            <div class="dialog-content badge-content">
+                <h2>Congratulations!</h2>
+                <img src="~/Content/images/badges/large/1000.png" alt="1000"/>
+                <a id="btnDialogClose" class="btn btn-primary btnClose" href="#">Close</a>
+            </div>
+        }
+
+    </div>
+</div>
+
+<!-- Transcribe Help Dialogs -->
+<div id="transcription-help-dialog" style="display: none" title="Transcription Example">
+    <div id="dialog-wrapper" class="row">
+        @if (Model.CardType == CitSciScribe.Models.CardType.Ichthyology1)
+        {
+            <img src="~/Content/help/charlestonFishesHelpCard.jpg" alt="Charleston Fishes Collection Card" class="img-responsive"/>
+            <div class="row">
+                <div class="col-xs-12">
+                    No.: CF 9838-9841
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    Scientific Name: Hybognathus regius Girard
+                </div>
+                <div class="col-xs-4">
+                    Family: Cyprinidae
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    Common Name: Eastern Silvery Minnow
+                </div>
+                <div class="col-xs-6">
+                    Drainage: SANTEE: Wateree
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    Locality: S.C., York Co.; Beaver Dam Creek at Co. Rd. 152, 5.5 mi. = 8.85 km. ENE Clover, S.C.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    Collected by: Frank Randall and Randolph Smoak
+                </div>
+                <div class="col-xs-6">
+                    Date: 21 June 1955
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2">
+                    Specimen(s): 4
+                </div>
+                <div class="col-xs-8">
+                    Measurements: SL = 37; 35; 32; 30 mm
+                </div>
+                <div class="col-xs-2">
+                    Sex:
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    Bottom: Rocky & sandy
+                </div>
+                <div class="col-xs-4">
+                    Water: Muddy
+                </div>
+                <div class="col-xs-4">
+                    Depth Collected: 3” – 3’
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    Temperature Air: 27 degrees
+                </div>
+                <div class="col-xs-3">
+                    Temperature Water: 21 degrees
+                </div>
+                <div class="col-xs-3">
+                    Salinity:
+                </div>
+                <div class="col-xs-3">
+                    Time: 1100 hrs.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    Remarks: Freeman #: 71-FW-55. H.W. Freeman Coll.
+                </div>
+                <div class="col-xs-4">
+                    Fluid: 50% ISOH
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    Donor: U.S. National Museum
+                </div>
+                <div class="col-xs-4">
+                    Acc. No: 1983.67
+                </div>
+                <div class="col-xs-4">
+                    Neg:
+                </div>
+            </div>
+        }
+    </div>
+</div>

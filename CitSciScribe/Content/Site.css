@@ -1,0 +1,267 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'Droid Sans', sans-serif !important;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nofloat {
+        float: none;
+        padding: 10px 15px;
+    }
+}
+
+.puffin-jumbotron {
+    background: url('http://naturalsciences.org/images/sliders/exmam-branding-background.jpg') no-repeat center center;
+    color: white;
+}
+
+.icthyology-jumbotron{
+    background: url('http://www.motherjones.com/files/2806004-jaws.jpg') no-repeat center center;
+    color: white;
+}
+
+.navbar-brand {
+    font-family: 'Damion', cursive;
+    font-size: 35px;
+}
+
+/* 
+*   Transcribe Page
+*/
+.action-button{
+    position:absolute;
+    width:155px;
+}
+.save-action-button{
+    top:66px;
+}
+.card {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.card-image {
+    width: inherit;
+    min-width: 895px;
+    max-width: 895px;
+}
+
+.valid-mask {
+    background-color: green;
+}
+
+.invalid-mask {
+    background-color: red;
+}
+
+.focused-transcription-field {
+}
+
+.transcription-field {
+}
+
+.mask {
+    opacity: 0.3;
+}
+
+.field {
+    opacity: 0.01;
+}
+
+.focused-field {
+    opacity: 0.7;
+}
+/*
+* Ichthyology1 Card Fields
+*/
+.Ichthyology1-mask {
+    height: 20px;
+    position: absolute;
+}
+
+.Ichthyology1-field {
+    height: 20px;
+    position: absolute;
+}
+
+.Ichthyology1-number-mask {
+    top: 12px;
+    width: 240px;
+    left: 80px;
+}
+
+.Ichthyology1-number-field {
+    top: 32px;
+    left: 80px;
+    width: 240px;
+    max-width: 240px;
+}
+
+.Ichthyology1-scientificName-mask {
+    top: 52px;
+    width: 380px;
+    left: 230px;
+}
+
+.Ichthyology1-scientificName-field {
+    top: 72px;
+    width: 380px;
+    max-width: 380px;
+    left: 230px;
+}
+
+.Ichthyology1-family-mask {
+    top: 58px;
+    width: 170px;
+    left: 710px;
+}
+
+.Ichthyology1-family-field {
+    top: 78px;
+    width: 170px;
+    max-width: 170px;
+    left: 710px;
+}
+
+.Ichthyology1-commonName-mask {
+    top: 91px;
+    width: 370px;
+    left: 193px;
+}
+
+.Ichthyology1-commonName-field {
+    top: 111px;
+    width: 370px;
+    max-width: 370px;
+    left: 193px;
+}
+
+.Ichthyology1-drainage-mask {
+    top: 97px;
+    width: 194px;
+    left: 685px;
+}
+
+.Ichthyology1-drainage-field {
+    top: 117px;
+    width: 194px;
+    max-width: 194px;
+    left: 685px;
+}
+
+.Ichthyology1-locality-mask {
+    top: 128px;
+    width: 525px;
+    left: 155px;
+}
+
+.Ichthyology1-locality-field {
+    top: 148px;
+    width: 525px;
+    max-width: 525px;
+    left: 155px;
+}
+
+.Ichthyology1-collectedBy-mask {
+    top: 205px;
+    width: 360px;
+    left: 195px;
+}
+
+.Ichthyology1-collectedBy-field {
+    top: 225px;
+    width: 360px;
+    max-width: 360px;
+    left: 195px;
+}
+
+.Ichthyology1-date-mask {
+    top: 209px;
+    width: 219px;
+    left: 661px;
+}
+
+.Ichthyology1-date-field {
+    top: 229px;
+    width: 219px;
+    max-width: 219px;
+    left: 661px;
+}
+
+.Ichthyology1-specimens-mask {
+    top: 243px;
+    width: 170px;
+    left: 184px;
+}
+
+.Ichthyology1-specimens-field {
+    top: 263px;
+    width: 170px;
+    max-width: 170px;
+    left: 184px;
+}
+
+.Ichthyology1-fluid-mask {
+    top: 402px;
+    width: 104px;
+    left: 780px;
+}
+
+.Ichthyology1-fluid-field {
+    top: 422px;
+    width: 104px;
+    max-width: 104px;
+    left: 780px;
+}
+
+.Ichthyology1-donor-mask {
+    top: 466px;
+    width: 290px;
+    left: 111px;
+}
+
+.Ichthyology1-donor-field {
+    top: 486px;
+    width: 290px;
+    max-width: 290px;
+    left: 111px;
+}
+
+.Ichthyology1-accessNumber-mask {
+    top: 476px;
+    width: 170px;
+    left: 613px;
+}
+
+.Ichthyology1-accessNumber-field {
+    top: 496px;
+    width: 170px;
+    max-width: 170px;
+    left: 613px;
+}

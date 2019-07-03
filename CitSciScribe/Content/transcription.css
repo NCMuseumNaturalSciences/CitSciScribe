@@ -1,0 +1,330 @@
+﻿/* Transcription Screens -------------------------------------------------------------- */
+
+#card-wrapper .form-row {
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    bottom: 0;
+    cursor: move;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: fixed;
+    right: 0;
+    top: auto;
+    width: 100%;
+    z-index: 15;
+}
+
+#container-draggable { left: 0 !important; }
+
+#handle {
+    background-color: #000;
+    height: 5px;
+    top: -6px;
+    width: 100%;
+}
+
+/* Horizontal Layout Transcription Form --------------------------  */
+
+#card-wrapper {
+    background: #000000;
+    background-color: #193281;
+    min-height: 100%;
+    padding-top: 10px;
+    position: relative;
+    width: 100%;
+}
+
+#card-wrapper .img-row .card-img {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 400px;
+    width: 100%;
+    z-index: 10;
+}
+
+#card-wrapper .img-row #charlestoninvert-card { padding-bottom: 570px; }
+
+#card-wrapper .img-row #westerncarolina-card { padding-bottom: 470px; }
+
+#card-wrapper .img-row #dragonfly-card { padding-bottom: 500px; }
+
+
+#card-wrapper form { padding: 10px 10px 0 10px; }
+
+#card-wrapper form input, #card-wrapper form textarea {
+    font-family: "Special Elite", "Myriad Pro", "Segoe UI", "Helvetica Nueue", Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#card-wrapper .form-group {
+    margin-bottom: 10px;
+    padding-bottom: 0;
+}
+
+#card-wrapper .form-group > .col-sm-12 > .form-group { margin-bottom: 0; }
+
+#card-wrapper .btn-primary { }
+
+/* Transcribe Form Enhancements ---------------------------------- */
+
+
+#card-wrapper .form-control:-moz-placeholder {
+    -moz-transition: opacity 0.35s ease-in-out;
+    color: #7D7D7D;
+    font-family: "Special Elite", "Segoe UI", "Helvetica Nueue", Helvetica, sans-serif;
+    transition: opacity 0.35s ease-in-out;
+}
+
+#card-wrapper .form-control::-moz-placeholder {
+    -moz-transition: opacity 0.35s ease-in-out;
+    color: #7D7D7D;
+    font-family: "Special Elite", "Segoe UI", "Helvetica Nueue", Helvetica, sans-serif;
+    transition: opacity 0.35s ease-in-out;
+}
+
+#card-wrapper .form-control::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.35s ease-in-out;
+    color: #7D7D7D;
+    font-family: "Special Elite", sans-serif;
+    transition: opacity 0.35s ease-in-out;
+}
+
+#card-wrapper .form-control:-ms-input-placeholder {
+    -ms-transition: opacity 0.35s ease-in-out;
+    color: #7D7D7D;
+    font-family: Lato, sans-serif;
+    transition: opacity 0.35s ease-in-out;
+}
+
+:hover:-moz-placeholder {
+    -moz-transition: opacity 0.35s ease-in-out;
+    color: #193281;
+    opacity: 0.5;
+    transition: opacity 0.35s ease-in-out;
+}
+
+:hover::-moz-placeholder {
+    -moz-transition: opacity 0.35s ease-in-out;
+    color: #193281 !important;
+    transition: opacity 0.35s ease-in-out;
+}
+
+:hover::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.35s ease-in-out;
+    color: #193281;
+    opacity: 0.5;
+    transition: opacity 0.35s ease-in-out;
+}
+
+:hover:-ms-input-placeholder {
+    -ms-transition: opacity 0.35s ease-in-out;
+    opacity: 0.75;
+    transition: opacity 0.35s ease-in-out;
+}
+
+
+/* Float Placeholders */
+
+#card-wrapper .form-group .field-wrapper {
+    display: flex;
+    height: 36px;
+    position: relative;
+}
+
+#card-wrapper .form-group .field-wrapper .float-label {
+    color: #7D7D7D;
+    font-family: "Special Elite", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 1;
+    pointer-events: none;
+    position: absolute;
+    transform: translate3d(15px, 10px, 0) scale(1);
+    transform-origin: left top;
+    transition: 240ms;
+}
+
+#card-wrapper .form-group .field-wrapper .form-control { background-color: #FFFFFF; }
+
+.field-wrapper.focused .float-label {
+    background-color: #FFFFFF;
+    height: 25px;
+    margin-top: -25px;
+    opacity: 1;
+    padding: 5px;
+    transform: scale(1);
+}
+
+.form-control { align-self: flex-end; }
+
+.transcribe-form-wrapper form .input-md {
+    border: 3px solid #bbb;
+    margin: 0;
+    padding-bottom: 2px;
+    padding-top: 4px;
+}
+
+.transcribe-form-wrapper form input:hover,
+.transcribe-form-wrapper form textarea:hover {
+    border-color: #193281;
+    outline: none;
+}
+
+.transcribe-form-wrapper form input:focus,
+.transcribe-form-wrapper form textarea:focus {
+    border: #888;
+    outline: none;
+}
+
+/* Transcription Help Dialogs ----------------------------------------------- */
+
+#transcription-help-dialog,
+#transcription-help-dialog #dialog-wrapper { overflow: hidden; }
+
+#transcription-help-dialog #dialog-wrapper .row { padding: 2px 4px; }
+
+#transcription-help-dialog #dialog-wrapper .row:nth-child(even) { background-color: rgba(100, 100, 100, 0.5); }
+
+#transcription-help-dialog .row,
+#transcription-help-dialog .row .col-xs-12,
+#transcription-help-dialog .row .col-xs-8,
+#transcription-help-dialog .row .col-xs-6,
+#transcription-help-dialog .row .col-xs-5,
+#transcription-help-dialog .row .col-xs-4,
+#transcription-help-dialog .row .col-xs-3,
+#transcription-help-dialog .row .col-xs-2 {
+    color: #EBEBEB;
+    font-size: 14px;
+}
+
+#transcription-help-dialog img {
+    margin: 0 auto;
+    max-width: 700px;
+    padding-bottom: 4px;
+    width: 700px;
+}
+
+.ui-dialog-help {
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-bottom-width: 0px;
+    border-radius: 8px;
+    border-width: 4px;
+}
+
+.ui-dialog-titlebar .ui-dialog-title {
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+/* Transcription Progress Notification */
+
+.ui-dialog-notify {
+    background-color: #193281;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.ui-dialog-notify .ui-dialog-titlebar.ui-widget-header { display: none !important; }
+
+.ui-dialog-notify .ui-dialog-titlebar { display: none; }
+
+.ui-dialog-notify .ui-dialog-titlebar-close { visibility: hidden; }
+
+#transcription-notification {
+    background-color: #FFFFFF;
+    overflow: hidden;
+    padding: 0 1.5em 1.5em 1.5em;
+}
+
+#transcription-notification #dialog-wrapper {
+    position: relative;
+    width: auto;
+}
+
+#transcription-notification #dialog-wrapper .dialog-content {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+#transcription-notification #dialog-wrapper .badge-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#transcription-notification #dialog-wrapper h1,
+#transcription-notification #dialog-wrapper h2,
+#transcription-notification #dialog-wrapper h3,
+#transcription-notification #dialog-wrapper p {
+    color: #193281;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    position: relative;
+    text-align: center;
+}
+
+#transcription-notification #dialog-wrapper h1 {
+    font-size: 56px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+#transcription-notification #dialog-wrapper p { font-size: 16px; }
+
+#transcription-notification #dialog-wrapper img {
+    display: block;
+    height: 175px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    margin-top: 10px;
+    width: 175px;
+}
+
+/* Approval ---------------------------------------------------------------- */
+
+.btn.btnSubmit.btnApprove {
+    background-color: #2E4E07;
+    border: 1px solid #FFFFFF;
+}
+
+.btn.btnSubmit.btnApprove:hover {
+    background-color: #FFFFFF;
+    border: 2px solid #2E4E07;
+    color: #2E4E07;
+}
+
+/* Form Adjustments ------------------------------------------------------- */
+
+#card-wrapper.IchthyologyCharleston { padding-bottom: 140px; }
+
+#card-wrapper.HerpetologyCharlestonAmphibiansReptiles { padding-bottom: 120px; }
+
+#card-wrapper.DukeMarine { padding-bottom: 80px; }
+
+/* Dialog Window Button */
+
+#transcription-notification .dialog-content .btn.btnClose {
+    background: #193281 none repeat scroll 0 0;
+    border: 2px solid #193281;
+    color: #ffffff;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 15px;
+    padding: 4px 6px;
+}
+
+#transcription-notification .dialog-content .btn.btnClose:hover {
+    background-color: #FFFFFF;
+    border: 2px solid #2E4E07;
+    color: #2E4E07;
+}

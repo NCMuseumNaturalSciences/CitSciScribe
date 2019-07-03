@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CitSciScribe</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/font-awesome.css"/>
+
+    <link rel="stylesheet" type="text/css" href="~/Content/core.css"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/sidebar.css"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/transcription.css"/>
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="outer-wrapper">
+    <header class="container-fluid navbar-static-top">
+        <div class="row">
+            @if (Request.IsAuthenticated && ViewBag.Name != null)
+            {
+                string name = Convert.ToString(ViewBag.Name);
+                @Html.ActionLink("Hello " + name + "!", "Index", "Manage", new {area = ""}, new {@class = "header-brand"})
+                ;
+            }
+            else
+            {
+                <div class="header-brand">Hello Transcriber!</div>
+            }
+            <ul class="badges">
+                @if (ViewBag.TranscriptionCount >= 1)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/small/1.png" alt="1"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 15)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/small/15.png" alt="15"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 25)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/small/25.png" alt="25"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 50)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/small/50.png" alt="50"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 100)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/small/100.png" alt="100"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 200)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/small/200.png" alt="200"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 500)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/small/500.png" alt="500"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 1000)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/small/1000.png" alt="1000"/>
+                    </li>
+                }
+            </ul>
+        </div>
+    </header>
+    <div id="wrapper" class="row container-fluid">
+        <div class="col-sm-2 sidebar sidebar-lg">
+            @Html.Partial("_Sidebar")
+        </div>
+        <div class="col-sm-10 main-content-area">
+            @RenderBody()
+        </div><!-- col-md-10 end -->
+        <div class="col-sm-2 sidebar mobile-only">
+            @Html.Partial("_Sidebar")
+        </div>
+    </div>
+</div><!-- outer-wrapper end -->
+<script type="text/javascript" src="~/Scripts/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Disable submit on enter key press
+        $('#transcription-form').on('keyup keypress',
+            function(e) {
+                var keyCode = e.keyCode || e.which;
+                if (keyCode === 13) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+    });
+</script>
+@RenderSection("Scripts", false)
+</body>
+</html>

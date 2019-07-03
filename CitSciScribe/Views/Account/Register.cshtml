@@ -1,0 +1,42 @@
+﻿@model CitSciScribe.Models.RegisterViewModel
+
+<div id="inner-wrapper" class="col-sm-offset-2">
+    <div class="row">
+        <div class="col-xs-12 col-logo">
+            <img src="" id="logo" alt="CitSciScribe" class="citsci-logo img-responsive"/>
+        </div>
+    </div>
+    <div class="row main-content">
+        <h2 class="page-title">Registration</h2>
+        <div class="col-sm-8 col-sm-offset-2 form-box">
+            <div class="form-bottom">
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new {@class = "reg-form", role = "form"}))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary("", new {@class = "text-danger"})
+                    <div class="form-group">
+                        <label for="form-firstname" class="sr-only">Firstname</label>
+                        <input type="text" id="form-firstname" class="form-firstname form-control input-lg" placeholder="First name" name="FirstName" value="@(Model != null ? Model.FirstName : "")">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-lastname" class="sr-only">Lastname</label>
+                        <input type="text" id="form-lastname" class="form-lastname form-control input-lg" placeholder="Last name" name="LastName" value="@(Model != null ? Model.LastName : "")">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-email" class="sr-only">Email Address</label>
+                        <input type="email" id="form-email" class="form-email form-control input-lg" placeholder="Email" name="Email" value="@(Model != null ? Model.Email : "")">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-password" class="sr-only">Password</label>
+                        <input type="password" id="form-password" class="form-password form-control input-lg" placeholder="Password" name="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-password2" class="sr-only">Re-type Password</label>
+                        <input type="password" id="form-password2" class="form-password2 form-control input-lg" placeholder="Re-type Password" name="ConfirmPassword">
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">REGISTER!</button>
+                }
+            </div>
+        </div>
+    </div>
+</div>

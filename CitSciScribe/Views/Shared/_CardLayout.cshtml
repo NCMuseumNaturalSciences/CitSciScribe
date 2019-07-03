@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CitSciScribe</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css">
+    <!--  <link rel="stylesheet" type="text/css" href="~/Content/font-awesome.css" />-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/core.css"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/sidebar.css"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/transcription.css"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/transcription-vertical.css"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/simplebar.css"/>
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,700" rel="stylesheet" type="text/css">
+</head>
+<body class="slide-open">
+<div id="outer-wrapper">
+    @RenderBody()
+</div><!-- outer-wrapper end -->
+<script type="text/javascript" src="~/Scripts/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery-ui.min.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery-scrolltofixed-min.js"></script>
+<script data-profile="input[name='profile_id']" src="https://scistarter.com/static/api/apihelper.js"></script>
+<script type="text/javascript" src="~/Scripts/scistarter-ajax.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery.slidereveal.min.js"></script>
+<script type="text/javascript" src="~/Scripts/vertical-layout.js"></script>
+<script type="text/javascript" src="~/Scripts/card-script.js"></script>
+
+@RenderSection("Scripts", false)
+</body>
+</html>

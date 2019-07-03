@@ -1,0 +1,78 @@
+﻿@model CitSciScribe.Models.IndexViewModel
+<div id="inner-wrapper" class="col-sm-offset-2">
+    <div class="row">
+        <div class="col-xs-12 col-logo">
+            <img src="" id="logo" alt="CitSciScribe" class="citsci-logo img-responsive"/>
+        </div>
+    </div>
+    <div class="row main-content profile-content">
+        <h2 class="page-title">User Profile</h2>
+        @if (ViewBag.StatusMessage != null)
+        {
+            <p class="text-success">@ViewBag.StatusMessage</p>
+        }
+        <div class="col-sm-12 profile-col">
+            <h4>
+                @if (Model.HasPassword)
+                {
+                    @Html.ActionLink("Change your password", "ChangePassword")
+                }
+                else
+                {
+                    @Html.ActionLink("Create", "SetPassword")
+                }
+            </h4>
+            <h4>Number of Transcriptions Completed: @Html.Raw(ViewBag.TranscriptionCount) </h4>
+            <ul class="badges-profile">
+                @if (ViewBag.TranscriptionCount >= 1)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/large/1.png" alt="1"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 15)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/large/15.png" alt="15"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 25)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/large/25.png" alt="25"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 50)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/large/50.png" alt="50"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 100)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/large/100.png" alt="100"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 200)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/large/200.png" alt="200"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 500)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/large/500.png" alt="500"/>
+                    </li>
+                }
+                @if (ViewBag.TranscriptionCount >= 1000)
+                {
+                    <li>
+                        <img src="~/Content/images/badges/large/1000.png" alt="1000"/>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

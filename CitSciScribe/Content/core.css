@@ -1,0 +1,582 @@
+﻿/* Main Stylesheet for CitSciScribe */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body { font-family: "Source Sans Pro", Arial, Helvetica, sans-serif; }
+
+/* Globals --------------------------------------------------------------------------- */
+
+h1 {
+    color: #231f20;
+    font-family: Oswald, "Segoe UI", "Helvetica Nueue", Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 42px;
+    margin-bottom: 0.0000em;
+    margin-top: 0.6563em;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #231f20;
+    font-family: "Source Sans Pro", "Segoe UI", "Helvetica Nueue", Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 42px;
+    margin-bottom: 0.0000em;
+    margin-top: 0.7500em;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #231f20;
+    font-family: "Source Sans Pro", "Segoe UI", "Helvetica Nueue", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 21px;
+    margin-bottom: 0.0000em;
+    margin-top: 0.9545em;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #231f20;
+    font-family: "Source Sans Pro", "Segoe UI", "Helvetica Nueue", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.0em;
+    line-height: 21px;
+    margin-bottom: 0.0000em;
+    margin-top: 1.1667em;
+}
+
+p, blockquote, address {
+    color: #231f20;
+    font-family: "Source Sans Pro", "Segoe UI", "Helvetica Nueue", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 21px 0;
+}
+
+ul li {
+    font-family: "Source Sans Pro", "Segoe UI", "Helvetica Nueue", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* Links */
+
+a, a:hover, a:active, a:focus { outline: none !important; }
+
+a:link {
+    color: #193281;
+    text-decoration: none;
+}
+
+a:visited { color: purple; }
+
+a:hover {
+    color: #193281;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #193281;
+    text-decoration: underline;
+}
+
+a.btn { color: #FFFFFF; }
+
+
+/* Main Body ------------------------------------------------------------------------- */
+
+body {
+    background-color: #193281;
+    overflow-x: hidden;
+}
+
+#outer-wrapper {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#wrapper {
+    background-color: #193281;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.main-content-area {
+    background-color: #FFFFFF;
+    background-size: cover;
+    min-height: 100%;
+    padding-bottom: 120px;
+    position: relative;
+    width: 86%;
+}
+
+.col-sm-2.sidebar {
+    background-color: #193281;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 14%;
+}
+
+#sidebar-wrapper {
+    background-color: #193281;
+    bottom: 0;
+    width: 100%;
+}
+
+@media only screen and (min-width: 1300px) {
+    .col-sm-2.sidebar { width: 12%; }
+
+    .col-sm-10.main-content-area { width: 88%; }
+}
+
+/* Main Body */
+
+#inner-wrapper {
+    margin: 0 auto;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    position: relative;
+    top: 100px;
+    width: 85%;
+}
+
+@media only screen and (min-width: 1300px) {
+    #inner-wrapper { width: 65%; }
+}
+
+.col-logo {
+    margin: 0;
+    padding: 0;
+}
+
+.col-logo img {
+    margin-left: -100px;
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.main-content {
+    margin-left: 0;
+    padding-bottom: 15px;
+    padding-left: 0;
+    padding-top: 15px;
+    position: relative;
+    top: -40px;
+    width: 100%;
+    z-index: 48;
+}
+
+.main-content p {
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+}
+
+.links {
+    position: relative;
+    width: 100%;
+}
+
+.mobile-only { display: none; }
+
+.main-content .col-sm-4 { text-align: center; }
+
+.main-content ul.stats-list {
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: 5px;
+    padding-left: 0;
+}
+
+.home-content.main-content ul.stats-list {
+    height: auto;
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+
+.home-content.main-content ul.stats-list li {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+    header.container-fluid { height: 220px; }
+
+    header ul.badges { }
+
+    .sidebar-lg { display: none; }
+
+    .sidebar.mobile-only {
+        display: block;
+        margin-bottom: 30px;
+        padding-top: 0;
+    }
+
+    .sidebar.mobile-only #sidebar-top {
+        display: block;
+        height: 100px;
+    }
+
+    .sidebar.mobile-only ul.sidebar-nav { padding-top: 0; }
+
+    .sidebar.mobile-only #sidebar-bottom { padding-bottom: 40px; }
+
+    .col-logo img {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    #inner-wrapper {
+        padding-bottom: 0;
+        padding-left: 0;
+        top: 20px;
+        width: 100%;
+    }
+
+    .main-content-area { top: 0; }
+}
+
+/* Header ----------------------------------------------------- */
+
+header {
+    background-color: #B0B0B0;
+    border: none;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+header .navbar { background-color: #B0B0B0; }
+
+header .header-brand {
+    color: #FFFFFF;
+    float: left;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    height: 100%;
+    letter-spacing: 0.05em;
+    line-height: 50px;
+    padding-left: 35px;
+    padding-top: 15px;
+    text-transform: uppercase;
+}
+
+
+/* Buttons --------------------------------------------------------------------------- */
+
+.btn-primary,
+#card-wrapper form .btnSubmit {
+    background: #193281;
+    border: 2px solid #193281;
+    color: #FFFFFF;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+#card-wrapper form .btnSubmit:hover,
+#card-wrapper form .btnSubmit:focus {
+    background-color: #FFFFFF;
+    border: 2px solid #193281;
+    color: #193281;
+    font-weight: 700;
+}
+
+.btnTranscribe {
+    background-color: rgb(25, 50, 129);
+    border-radius: 10px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 25;
+}
+
+.btnLogin, .btnRegister {
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+
+/* Collections ----------------------------------------------------------------------- */
+
+h4.project-notify {
+    color: #193281;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h2.page-title {
+    border-bottom: 2px solid #193281;
+    color: #193281;
+    display: block;
+    height: 40px;
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+
+.projects-wrapper #inner-wrapper { width: 90%; }
+
+@media only screen and (min-width: 1300px) {
+    .projects-wrapper #inner-wrapper { width: 70%; }
+}
+
+.projects {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.projects .project
+.projects .sub-project {
+    margin: 0 0 10px 0;
+    padding-left: 0;
+}
+
+.projects .project .project-sub-wrapper h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.projects .project .project-sub-wrapper .btn { margin-bottom: 5px; }
+
+.projects h2 {
+    border-bottom: 2px solid #193281;
+    color: #193281;
+    display: block;
+    height: 40px;
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+
+.projects > .col-xs-12 { padding-left: 0; }
+
+.projects .project .col-sm-3,
+.projects .project .col-md-3 {
+    padding-left: 0;
+    width: 22%;
+}
+
+.projects .col-sm-3 img,
+.projects .col-md-3 img {
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 20px;
+    position: relative;
+}
+
+.projects .project.row {
+    border-bottom: 2px solid #193281;
+    padding-bottom: 15px;
+}
+
+.projects .project .btn,
+.projects .project .stats { margin-top: 15px; }
+
+h3.project-title {
+    color: #193281;
+    line-height: 1em;
+    margin-bottom: 15px;
+}
+
+.projects h3,
+.projects .col-xs-12 h3,
+.projects .col-sm-9 h3,
+.projects .col-md-9 h3 {
+    color: #193281;
+    line-height: 1em;
+    margin-bottom: 15px;
+}
+
+.projects p.project-description {
+    color: #193281;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 0 10px 0;
+    padding: 0 40px 0 0;
+}
+
+.projects h4.list-header {
+    color: rgba(100, 100, 100, 1.0);
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0;
+}
+
+.projects ul.stats-list {
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: 5px;
+    padding-left: 0;
+}
+
+.main-content ul.stats-list li {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.projects ul.stats-list li {
+    color: rgba(100, 100, 100, 1.0);
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.projects .col-md-9 > .row > .col-sm-6,
+.projects .col-sm-9 > .row > .col-sm-6 {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.projects .project .row .btn-col { padding-left: 0; }
+
+/* Links ----------------------------------------------------------------------------- */
+
+.main-content.links ul {
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+
+
+/* Registration/Login Form ----------------------------------------------------------- */
+
+.reg-form, .login-form {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin: 0 auto;
+    padding: 25px 35px;
+    position: relative;
+}
+
+.reg-form input,
+.login-form input {
+    border: 3px solid rgba(200, 200, 200, 1.0);
+    border-bottom: solid 3px rgba(200, 200, 200, 1.0);
+    box-shadow: none !important;
+    outline: none;
+}
+
+.reg-form input:focus,
+.login-form input:focus {
+    border: 3px solid rgba(125, 125, 125, 1.0);
+    border-bottom: 4px solid #193281;
+    box-shadow: none !important;
+    outline: none;
+}
+
+.reg-form button,
+.login-form button {
+    background: #193281;
+    border: 2px solid #193281;
+    color: #FFFFFF;
+}
+
+.reg-form button:hover,
+.reg-form button:focus,
+.login-form button:hover,
+.login-form button:focus {
+    background-color: #FFFFFF;
+    border: 2px solid #193281;
+    color: #193281;
+    font-weight: 700;
+}
+
+/* Header Badges ------------------------------------------------------------------------------ */
+
+header ul.badges {
+    display: inline-block;
+    height: 100%;
+    margin-left: 5px;
+}
+
+header ul.badges li {
+    display: inline-block;
+    float: left;
+    list-style-type: none;
+    padding: 10px 12px 0 0;
+}
+
+header ul.badges li img {
+    height: 60px;
+    width: 60px;
+}
+
+/* About ------------------------------------------ */
+
+div.row.main-content.about-content div.page-content div.row div.col-xs-12.video-col { margin-bottom: 15px; }
+
+.about-content .page-content .row .col-sm-9 p { margin-bottom: 5px; }
+
+.about-content .page-content .row .col-sm-3 img { padding-top: 4px; }
+
+.row.nsf-logo .col-sm-10 p {
+    height: 50px;
+    line-height: 50px;
+}
+
+/* About Badges ----------------- */
+
+.about-content ul.badges {
+    display: inline-block;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.about-content ul.badges li {
+    display: inline-block;
+    float: left;
+    list-style-type: none;
+    padding: 0 8px 0 0;
+}
+
+.about-content ul.badges li img {
+    height: 90px;
+    width: 90px;
+}
+
+.about-content .list-header { margin-bottom: 10px; }
+
+
+/* Profile Badges ------------------------------------------------------------------------ */
+
+.main-content.profile-content .profile-col { padding-left: 0; }
+
+.main-content.profile-content ul.badges-profile {
+    list-style-type: none;
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+.main-content.profile-content ul.badges-profile img {
+    height: 180px;
+    width: 180px;
+}

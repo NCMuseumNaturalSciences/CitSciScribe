@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitSciScribe", "CitSciScribe\CitSciScribe.csproj", "{C3331CA9-14B9-4B9E-88A3-E5C716975036}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3331CA9-14B9-4B9E-88A3-E5C716975036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3331CA9-14B9-4B9E-88A3-E5C716975036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3331CA9-14B9-4B9E-88A3-E5C716975036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3331CA9-14B9-4B9E-88A3-E5C716975036}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {E54BF5CB-56C9-425E-AD4F-87683C9CE188}
+	EndGlobalSection
+EndGlobal

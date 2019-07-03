@@ -1,0 +1,112 @@
+﻿/* Sidebar ------------------------------- */
+ul.sidebar-nav {
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 40px 0 0 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.sidebar-nav li {
+    border-left: #193281 4px solid;
+    float: left;
+    line-height: 36px;
+    padding: 8px 0 4px 32px;
+    text-indent: 0;
+    width: 100%;
+}
+
+.sidebar-nav li a {
+    color: #FFFFFF;
+    display: block;
+    font-family: "Source Sans Pro", "Myriad Pro", "Segoe UI", "Helvetica Nueue", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400 !important;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+.sidebar-nav li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-left: #FFFFFF 4px solid;
+    width: 100%;
+}
+
+.sidebar-nav li a:hover {
+    color: #fff;
+    text-decoration: none;   
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus { text-decoration: none; }
+
+#sidebar-top {
+    display: block;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+}
+
+#sidebar-bottom {
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#sidebar-logo {
+    left: 0px;
+    padding: 0;
+    width: 100%;
+}
+
+#sidebar-logo img { margin: 0 0 0 28px; }
+
+#sidebar-logo a { text-decoration: none; }
+
+#sidebar-logo a:hover { background-color: rgba(150, 150, 150, 0.4); }
+
+.hvr-sweep-to-right {
+    backface-visibility: hidden;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    display: inline-block;
+    font-weight: 400;
+    position: relative;
+    transform: translateZ(0px);
+    transition-duration: 0.3s;
+    transition-property: color;
+    vertical-align: middle;
+}
+
+.hvr-sweep-to-right::before {
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    font-weight: 400;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50% 0;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    z-index: -1;
+}
+
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+    color: white;
+    font-weight: 400;
+}
+
+.hvr-sweep-to-right:hover::before, .hvr-sweep-to-right:focus::before, .hvr-sweep-to-right:active::before {
+    font-weight: 400;
+    transform: scaleX(1);
+}

@@ -1,0 +1,41 @@
+﻿<div id="sidebar-wrapper">
+    <div id="sidebar-top">
+        <ul id="menu" class="sidebar-nav nav-stacked">
+            <li class="hvr-sweep-to-right">
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li class="hvr-sweep-to-right">
+                @Html.ActionLink("Projects", "Projects", "Transcription")
+            </li>
+            @if (Request.IsAuthenticated)
+            {
+                <li class="hvr-sweep-to-right">
+                    @Html.ActionLink("Account", "Index", "Manage", new {area = ""}, new {title = "Account"})
+                </li>
+                <li class="hvr-sweep-to-right">
+                    @using (Html.BeginForm("LogOff", "Account", new {area = ""}, FormMethod.Post, new {id = "logoutForm"}))
+                    {
+                        @Html.AntiForgeryToken()<a href="javascript:sessionStorage.removeItem('accessToken');$('#logoutForm').submit();">Log off</a>
+                    }
+                </li>
+            }
+            else
+            {
+                <li class="hvr-sweep-to-right">
+                    @Html.ActionLink("Login", "Login", "Account")
+                </li>
+                <li class="hvr-sweep-to-right">
+                    @Html.ActionLink("Register", "Register", "Account")
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div id="sidebar-bottom">
+        <div id="sidebar-logo">
+            <a href="#">
+                <!-- Logo goes here -->
+            </a>
+        </div>
+    </div>
+</div>

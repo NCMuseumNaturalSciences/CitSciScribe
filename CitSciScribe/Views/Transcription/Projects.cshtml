@@ -1,0 +1,46 @@
+﻿@model CitSciScribe.Models.ProjectsViewModel
+
+<div id="inner-wrapper" class="col-sm-offset-2">
+    <div class="row">
+        <div class="col-xs-12 col-logo">
+            <img src="" alt="CitSciScribe" id="logo" class="citsci-logo img-responsive"/>
+        </div>
+    </div>
+    <div class="row main-content projects">
+        <h2 class="page-title">Projects</h2>
+        <div class="col-xs-12">
+            <div class="row project">
+                <div class="col-sm-3 col-xs-12">
+                    <img src="" id="project-image-1"
+                         class="img-responsive center-block" alt="Alt Text"/>
+                </div>
+                <div class="col-sm-9 col-xs-12">
+                    <div class="row">
+                        <h3>Charleston Fishes Project</h3>
+                        <p class="project-description">Ever wondered what lived in the rivers and coastal waterways of the Carolinas 200 years ago? Recently, we acquired an incredible resource, the collection of fishes from the Charleston Museum, which dates back to the 1800’s and helps to answer this question. This historical snapshot not only tells us what lived in these waters long ago, but helps to document changes in the biodiversity of the Carolinas over time. This collection is an essential resource for the conservation and management of many species of fish. So cast your line into this project and help us make these data available to the world!</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 btn-col">
+                            @if (Request.IsAuthenticated)
+                            {
+                                @Html.ActionLink("TRANSCRIBE NOW!", "Transcribe", "Transcription", new {collectionProject = CitSciScribe.Models.CollectionProject.IchthyologyCharleston},
+                                    new {Class = "btn btn-primary btnTranscribe"})
+                            }
+                            else
+                            {
+                                @Html.ActionLink("Log in to Transcribe", "Login", "Account", new {}, new {Class = "btn btn-primary btnTranscribe"})
+                            }
+                        </div>
+                        <div class="col-sm-6 stats">
+                            <h4 class="list-header">Statistics</h4>
+                            <ul class="stats-list">
+                                <li>Number of Transcriptions: @(Model.CharlestonIcth.TranscriptionsTotal)</li>
+                                <li>Number of Transcribers: @(Model.CharlestonIcth.UsersContributing)</li>
+                            </ul>
+                        </div><!-- col-sm-5 end -->
+                    </div><!-- row end -->
+                </div><!-- col-sm-9 end -->
+            </div><!-- end charleston fishes -->
+        </div>
+    </div>
+</div>

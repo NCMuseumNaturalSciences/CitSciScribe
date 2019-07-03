@@ -1,0 +1,33 @@
+﻿/* The Meyer Reset */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, button, pre, a, abbr, acronym, address, code, em, img, ins, q, strike, strong, sub, sup, tt, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td {
+    -moz-background-clip: none;
+    background: transparent;
+    border: 0 none;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+body { line-height: 1 }
+
+ol, ul { list-style: none }
+
+html { overflow-y: scroll }
+
+:focus { outline: 0 }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+input[type=submit], label, select, button, .pointer { cursor: pointer }
+
+textarea { overflow: auto }
+
+iframe {
+    filter: alpha(opacity=100) !important; /* for IE */
+    opacity: 1 !important; /* for conforming browsers */
+}

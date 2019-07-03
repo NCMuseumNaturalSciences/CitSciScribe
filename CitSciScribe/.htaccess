@@ -1,0 +1,11 @@
+﻿RewriteEngine On
+RewriteBase /
+
+# Remove www prefix
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Redirect blog to blog sudomain
+RewriteCond %{HTTP_HOST} ^citsciscribe.org
+RewriteRule ^blog/(.*)$ http://citsciscribe.naturalsciences.org/$1 [L,R=301]
+

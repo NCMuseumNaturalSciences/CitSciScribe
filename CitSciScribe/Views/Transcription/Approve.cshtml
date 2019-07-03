@@ -1,0 +1,201 @@
+﻿@model CitSciScribe.Models.Card
+@{
+    Layout = "~/Views/Shared/_CardLayout.cshtml";
+    var formAction = "";
+    if (Model.CollectionProject == CitSciScribe.Models.CollectionProject.IchthyologyCharleston)
+    {
+        formAction = "ApproveIchthyology?collectionProject=" + Model.CollectionProject;
+    }
+}
+<div id="card-wrapper" class="charlestonFishes container-fluid transcribe-form-wrapper">
+    <div class="row img-row">
+        <div class="col-sm-12 card-col">
+            @if (Model.CardType == CitSciScribe.Models.CardType.Ichthyology1)
+            {
+                <img src="@Model.CardImagePath" class="card-img" alt="Card"/>
+            }
+        </div>
+    </div>
+
+    <div class="row form-row">
+        <form class="transcribe-form-h form-horizontal form-charlestonFishes" action="@formAction" method="post" role="form">
+            <input type="hidden" value="@Model.Id" name="cardId"/>
+            <input type="hidden" value="@Model.Transcriptions.First().Id" name="id"/>
+
+            @if (Model.CardType == CitSciScribe.Models.CardType.Ichthyology1)
+            {
+                var transcription = (IchthyologyTranscription) Model.Transcriptions.First();
+                transcription.Card = null;
+                <div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label for="catalog-number" class="col-sm-2 control-label sr-only">Catalog Number</label>
+                                    <input type="text" class="form-control input-md" placeholder="No." name="number" value="@transcription.Number">
+                                </div>
+                                <div class="col-sm-5">
+                                    <label for="scientific-name" class="col-sm-2 control-label sr-only">Scientific Name</label>
+                                    <input type="text" class="form-control input-md" placeholder="Sci. Name" name="scientificname" value="@transcription.ScientificName">
+                                </div>
+                                <div class="col-sm-5">
+                                    <label for="sex" class="col-sm-2 control-label sr-only">Family</label>
+                                    <input type="text" class="form-control input-md" placeholder="Family" name="family" value="@transcription.Family">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label for="common-name" class="col-sm-2 control-label sr-only">Common Name</label>
+                                    <input type="text" class="form-control input-md" placeholder="Common Name" name="commonname" value="@transcription.CommonName">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="sex" class="col-sm-2 control-label sr-only">Drainage</label>
+                                    <input type="text" class="form-control input-md" placeholder="Drainage" name="drainage" value="@transcription.Drainage">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <label for="locality" class="col-sm-2 control-label sr-only">Locality</label>
+                                    <input type="text" class="form-control input-md" rows="1" placeholder="Locality" name="locality" value="@transcription.Locality"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label for="collector" class="col-sm-2 control-label sr-only">Collector</label>
+                                    <input type="text" class="form-control input-md" placeholder="Collector" name="CollectedBy" value="@transcription.CollectedBy">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control input-md" placeholder="Day" name="date" value="@transcription.Date">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="number-specimens" class="col-sm-2 control-label sr-only">Number of Specimens</label>
+                                    <input type="text" class="form-control input-md" placeholder="Specimen(s)" name="specimens" value="@transcription.Specimens">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="measurements" class="col-sm-2 control-label sr-only">Measurements</label>
+                                    <input type="text" class="form-control input-md" placeholder="Measurements" name="measurements" value="@transcription.Measurements">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="habitat" class="col-sm-2 control-label sr-only">Sex</label>
+                                    <input type="text" class="form-control input-md" placeholder="Sex" name="sex" value="@transcription.Sex">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group temp-group">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="air-temp" class="col-sm-2 control-label sr-only">Bottom</label>
+                                    <input type="text" class="form-control input-md" placeholder="Bottom" name="bottom" value="@transcription.Bottom">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="water-temp" class="col-sm-2 control-label sr-only">Water</label>
+                                    <input type="text" class="form-control input-md" placeholder="Water" name="water" value="@transcription.Water">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="time" class="col-sm-2 control-label sr-only">Depth Collected</label>
+                                    <input type="text" class="form-control input-md" placeholder="Depth Collected" name="depthcollected" value="@transcription.DepthCollected">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group temp-group">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="col-sm-3">
+                                    <label for="air-temp" class="col-sm-2 control-label sr-only">Air Temperature</label>
+                                    <input type="text" class="form-control input-md" placeholder="Temperature Air" name="temperature" value="@transcription.Temperature">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="water-temp" class="col-sm-2 control-label sr-only">Water Temperature</label>
+                                    <input type="text" class="form-control input-md" placeholder="Temperature Water" name="waterTwo" value="@transcription.WaterTwo">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="time" class="col-sm-2 control-label sr-only">Salinity</label>
+                                    <input type="text" class="form-control input-md" placeholder="Salinity" name="salinity" value="@transcription.Salinity">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="time" class="col-sm-2 control-label sr-only">Time of Day</label>
+                                    <input type="text" class="form-control input-md" placeholder="Time" name="time" value="@transcription.Time">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="col-sm-8">
+                                    <label for="remarks" class="col-sm-2 control-label sr-only">Remarks</label>
+                                    <input type="text" class="form-control input-md" rows="1" placeholder="Remarks" name="remarks" value="@transcription.Remarks"/>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="storage-fluid" class="col-sm-2 control-label sr-only">Storage Fluid</label>
+                                    <input type="text" class="form-control input-md" placeholder="Fluid" name="fluid" value="@transcription.Fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="donor" class="col-sm-2 control-label sr-only">Donor</label>
+                                    <input type="text" class="form-control input-md" placeholder="Donor" name="donor" value="@transcription.Donor">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="accession-num" class="col-sm-2 control-label sr-only">Accession Number</label>
+                                    <input type="text" class="form-control input-md" placeholder="Acc. No" name="AccessNumber" value="@transcription.AccessNumber">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="neg" class="col-sm-2 control-label sr-only">Neg</label>
+                                    <input type="text" class="form-control input-md" placeholder="Neg" name="neg" value="@transcription.Neg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <a href="@Url.Action("Projects", "Transcription")" class="btn btn-primary" value="Home">
+                                        <i class="fa fa-home"></i>
+                                    </a>
+                                </div>
+                                <div class="col-sm-offset-8 col-sm-2">
+                                    <input type="submit" class="btn btn-primary btnSubmit btnApprove" value="Approve" style="float: right;"/>
+                                    <a href="@Url.Action("SkipApproval", "Transcription", new {cardId = Model.Id, collectionProject = Model.CollectionProject})" class="btn btn-primary btnSubmit" style="float: right; margin-right: 4px;">Skip</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </form>
+    </div>
+</div>
