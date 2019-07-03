@@ -1,2 +1,2 @@
-# CitSciScribeRepository
+# CitSciScribe
  
