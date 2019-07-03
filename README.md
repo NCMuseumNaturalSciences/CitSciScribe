@@ -1,5 +1,4 @@
 # CitSciScribe
-
 Citizen Science Web Application for Digital Transciption of Museum Collections Primary Sources
 
 <strong>Technology Stack</strong><br>
@@ -9,7 +8,8 @@ Citizen Science Web Application for Digital Transciption of Museum Collections P
 * Bootstrap 3.7
 * Font Awesome 4
 
-<strong>Authors</strong><br>
+<strong>Originally Developed by</strong>
+* James Gieszelmann (<a href="https://www.linkedin.com/in/james-gieszelmann-b6063b98">LinkedIn Profile</a>)
 * Ben Norton
 
 <strong>Organization:</strong> North Carolina Museum of Natural Sciences<br>
