@@ -1,6 +1,5 @@
 # CitSciScribe
 ![Zenodo Badge](./zenodo.3269878.svg)
-<img src="./zenodo.3269878.svg">
 
 CitSciScribe is a web application written in ASP MVC. The primary function is to allow citizen scientists transcribe handwritten data into a digital format. The transcribed data is made available online with two primary purposes. First, researchers who wish to make use of a collection can access the information. Second, the public gains access to the data and the wealth of knowledge such collections contain.
 
