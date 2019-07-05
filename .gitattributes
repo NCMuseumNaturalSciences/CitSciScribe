@@ -62,4 +62,5 @@
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
 
-static/* linguist-vendored
+CitSciScribe/Content/* linguist-vendored
+CitSciScribe/Scripts/* linguist-vendored
