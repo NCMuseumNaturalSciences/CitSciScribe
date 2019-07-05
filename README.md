@@ -12,10 +12,10 @@ CitSciScribe is a web application written in ASP MVC. The primary function is to
 <strong>Project Funding:</strong> NSF Grant Award 1458082<br>
 CSBR: Natural History: Curation and Digitization of Significant, Newly Acquired Fish, Amphibian, and Reptile Collections at the North Carolina State Museum of Natural Sciences<br>
 Investigator(s):<br>
-Gabriela Hogue <a href="mailto:gabriela.hogue@naturalsciences.org">gabriela.hogue@naturalsciences.org</a> (Principal Investigator)
-Jeffrey Beane (Co-Principal Investigator)
-Christine Goforth (Co-Principal Investigator)
-Bryan Stuart (Co-Principal Investigator)
+Gabriela Hogue <a href="mailto:gabriela.hogue@naturalsciences.org">gabriela.hogue@naturalsciences.org</a> (Principal Investigator)<br>
+Jeffrey Beane (Co-Principal Investigator)<br>
+Christine Goforth (Co-Principal Investigator)<br>
+Bryan Stuart (Co-Principal Investigator)<br>
 Ben Norton (Co-Principal Investigator)
 
 Application Retirement Date: May 5th, 2019<br>
@@ -25,6 +25,7 @@ Gabriela Hogue<br>
 Collections Manager, Ichthyology<br>
 North Carolina Museum of Natural Sciences<br>
 <a href="mailto:gabriela.hogue@naturealsciences.org">gabriela.hogue@naturealsciences.org</a><br>
+
 Chris Goforth<br>
 Head, Citizen Science<br>
 North Carolina Museum of Natural Sciences<br>
