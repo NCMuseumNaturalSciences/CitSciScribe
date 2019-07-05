@@ -64,3 +64,5 @@
 
 CitSciScribe/Content/* linguist-vendored
 CitSciScribe/Scripts/* linguist-vendored
+
+*.cs text diff=csharp
